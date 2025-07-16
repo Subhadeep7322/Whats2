@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whats2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <p><a href="index.html">Whats <span>2</span></a></p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="form_container">
+        <div class="form">
+            <div class="intro">
+                <p><span>Whats 2</span> is a lightweight tool that allows you to send WhatsApp messages to any number
+                    without adding it to your
+                    contacts.</p>
+            </div>
+            <div class="input_box">
+                <input type="text" id="phoneNumber" placeholder="Enter mobile number" />
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+        <div class="instructions"></div>
+    </section>
+    <footer></footer>
+
+    <script>
+        function sendMessage() {
+            const number = document.getElementById('phoneNumber').value.trim();
+            if (number.length < 10 || isNaN(number)) {
+                alert("Please enter a valid mobile number.");
+                return;
+            }
+            window.open(`https://wa.me/+91${number}`, '_blank');
+        }
+    </script>
+</body>
+
+</html>
