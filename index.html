@@ -4,37 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Whats2</title>
+    <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <header>
         <div class="logo">
-            <p><a href="index.html">Whats <span>2</span></a></p>
+            <a href="index.html">Whats<span>2</span></a>
         </div>
         <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-            </ul>
+            <a href="#">About</a>
+            <a href="#">Report a bug</a>
         </nav>
     </header>
-    <section class="form_container">
-        <div class="form">
-            <div class="intro">
-                <p><span>Whats 2</span> is a lightweight tool that allows you to send WhatsApp messages to any number
-                    without adding it to your
-                    contacts.</p>
-            </div>
-            <div class="input_box">
-                <input type="text" id="phoneNumber" placeholder="Enter mobile number" />
+
+    <div class="form_container">
+        <form action="#">
+            <input type="number" id="phoneNumber" placeholder="Enter mobile number" />
+            <div class="buttons">
                 <button onclick="sendMessage()">Send</button>
             </div>
-        </div>
-        <div class="instructions"></div>
-    </section>
-    <footer></footer>
+        </form>
+    </div>
 
     <script>
         function sendMessage() {
@@ -45,6 +37,7 @@
             }
             window.open(`https://wa.me/+91${number}`, '_blank');
         }
+
     </script>
 </body>
 

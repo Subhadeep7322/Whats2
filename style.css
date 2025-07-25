@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Righteous&display=swap');
 
 
 * {
@@ -8,7 +8,9 @@
 }
 
 body {
-    background-color: black;
+    width: 100%;
+    height: 100dvh;
+    background: linear-gradient(180deg, rgb(110, 110, 251), rgb(255, 139, 255), rgb(255, 114, 114));
 }
 
 header {
@@ -16,166 +18,99 @@ header {
     height: 10vh;
     display: flex;
     align-items: center;
+    padding: 0 5vw;
     justify-content: space-between;
-    background-color: transparent;
+    box-shadow: 0 0 10px rgb(54, 53, 53);
 }
 
 header .logo {
-    width: 20vw;
+    width: 30vw;
     height: 10vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-header .logo a {
+.logo a {
     text-decoration: none;
-    font-size: 2rem;
     color: white;
-    font-family: "Montserrat", sans-serif;
+    font-size: 1.7rem;
     font-weight: 600;
-}
-
-header .logo span {
-    font-size: 3rem;
-    color: #25D366;
-    position: relative;
-    left: -.4vw;
+    font-family: "Righteous", sans-serif;
 }
 
 header nav {
-    width: 20vw;
+    width: 40vw;
     height: 10vh;
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin-right: 15vw;
+    justify-content: space-evenly;
 }
 
-header nav ul {
-    display: flex;
-}
-
-header nav ul li {
-    list-style: none;
-}
-
-header nav li a {
+nav a {
     text-decoration: none;
+    color: rgb(226, 224, 224);
+    font-size: .8rem;
+    font-weight: 400;
+    font-family: "Righteous", sans-serif;
+    padding: 1vh 1vw;
+    border-bottom: 1px solid transparent;
+}
+
+nav a:hover {
+    border-bottom: 1px solid white;
     color: white;
-    padding: 1vh 2vw;
-    margin: 0 1vw;
-    font-family: "Quicksand", sans-serif;
-    border-radius: 35px;
-    transition: .5s ease-in-out;
-    font-weight: 200;
 }
-
-header nav li a:hover {
-    background-color: rgba(255, 255, 255, 0.247);
-}
-
-/* this is the input section */
 
 .form_container {
     width: 100%;
-    height: 90vh;
+    height: 80vh;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 
-.form {
-    margin: 5vh 0;
-    width: 50vw;
-    height: 75vh;
-    border-top-right-radius: 35px;
-    border-bottom-right-radius: 35px;
-    background: url(assets/whatsapp_background.jpg);
-}
-
-.form .intro {
-    width: 36vw;
-    height: 18vh;
-    padding: 1vh 1vw;
-    margin: 5vh 0;
-    display: flex;
-    align-items: center;
-    background-color: #dcf8c6;
-    position: relative;
-    right: -28%;
-    text-align: right;
-    border-top-left-radius: 35px;
-}
-
-.form .intro span {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: rgb(0, 0, 0);
-}
-
-.form .intro p {
-    font-size: .9rem;
-    color: black;
-    font-family: "Poppins", sans-serif;
-}
-
-.form .input_box {
-    background-color: #dcf8c6;
-    width: 35vw;
+form {
+    width: 80vw;
     height: 40vh;
-    border-top-right-radius: 35px;
+    background: url(assets/whatsapp_background.jpg);
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-
-.form .input_box input {
-    width: 20vw;
-    height: 6vh;
-    border: none;
+form input {
+    background-color: grey;
     outline: none;
-    background: linear-gradient(60deg, #075e54, #075e54, #075e54, #075e547b);
-    border-radius: 35px;
-    border-bottom-right-radius: 0;
-    padding-left: 2vw;
+    border: none;
+    width: 70%;
+    height: 5vh;
+    padding-left: 3vw;
+    border-radius: 9px;
     color: white;
 }
 
-.form .input_box input::placeholder {
-    color: rgba(255, 255, 255, 0.684);
+form ::placeholder {
+    color: white;
+    font-size: .7rem;
     letter-spacing: 1px;
 }
 
-.form .input_box button {
-    background-color: #25D366;
-    background: linear-gradient(60deg, #25D366, #25D366, #25d36557);
-    padding: 1.5vh 3vw;
-    border: none;
+
+form button {
+    width: 25vw;
+    height: 5vh;
+    margin-top: 1vh;
     outline: none;
-    border-radius: 35px;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    color: rgb(255, 255, 255);
+    border: none;
+    background-color: #25D366;
+    border-top-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border-left: 2px solid #3b674b;
+    border-bottom: 3px solid #3b674b;
+    color: rgba(0, 0, 0, 0.656);
     font-weight: 600;
-    letter-spacing: 2px;
-    position: relative;
-    left: 5.55vw;
-}
-
-
-
-
-
-
-
-.instructions {
-    width: 30vw;
-    height: 55vh;
-    margin: 0 auto;
-    border-radius: 25px;
-    background: url(assets/new_file.png);
-    background-size: cover;
+    letter-spacing: .5px;
 }
